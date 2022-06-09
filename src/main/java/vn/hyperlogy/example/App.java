@@ -6,6 +6,8 @@ public class App {
 
     private static final String SECRET_KEY = "ee57d1b88c3307de37fd73f597be06d9";
 
+    private static final String BANK_REF_NO = "1234567890";
+
     private static final String ACCOUNT_NO = "HYPERLOGY-SVM001";
 
     private static final String MESSAGE = "Successed";
@@ -16,7 +18,7 @@ public class App {
 
     private static final String BANK_ID = "sacombank";
 
-    private static final String EXPECTED_SIGNATURE  = "c712f5800d3bedff98c3c9ade1ac0608cf82327f5a8a0882cbef5551f642562c";
+    private static final String EXPECTED_SIGNATURE  = "6c6e4f8c8ea3ade8287e3be599d4b4d7ebe22d5f792589f5973641c2daa32b5e";
 
     public static void main(String[] args) {
         try {
@@ -30,6 +32,7 @@ public class App {
     public static String getData() {
         return new StringBuilder().append("accessKey=").append(ACCESS_KEY)
             .append("&accountNo=").append(ACCOUNT_NO)
+            .append("&bankRefNo=").append(BANK_REF_NO)
             .append("&bankId=").append(BANK_ID)
             .append("&amount=").append(AMOUNT)
             .append("&message=").append(MESSAGE)
